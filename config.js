@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-  copyright: '© All rights reserved.',
-  disqusShortname: '',
+  url: 'https://dpundir.com',
+  title: 'Playground of Dinkar Pundir',
+  subtitle: 'Welcome to my punching bag.',
+  copyright: '© 2018 by Dinkar Pundir. All rights reserved.',
+  disqusShortname: 'dpundir',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-72802036-1',
   menu: [
     {
       label: 'Articles',
@@ -23,14 +23,14 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Dinkar Pundir',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Tinkerer.',
     contacts: {
-      email: '#',
+      email: 'dinkarpundir@gmail.com',
       telegram: '#',
-      twitter: '#',
-      github: '#',
+      twitter: '@dinkarpundir',
+      github: 'dinkar',
       rss: '#',
       vkontakte: '#'
     }
