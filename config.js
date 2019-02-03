@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://dpundir.com',
-  title: 'Playground of Dinkar Pundir',
+  title: 'Dinkar Pundir',
   subtitle: 'Welcome to my punching bag.',
   copyright: '© 2018 by Dinkar Pundir. All rights reserved.',
   disqusShortname: 'dpundir',
@@ -31,8 +31,9 @@ module.exports = {
       telegram: '#',
       twitter: '@dinkarpundir',
       github: 'dinkar',
-      rss: '#',
-      vkontakte: '#'
+      rss: 'rss.xml',
+      vkontakte: '#',
+      facebook: 'dinkar.pundir'
     }
   }
 };
