@@ -24,7 +24,7 @@ module.exports = {
   ],
   author: {
     name: 'Dinkar Pundir',
-    photo: '/photo.jpg',
+    photo: '/photo.png',
     bio: 'Tinkerer.',
     contacts: {
       email: 'dinkarpundir@gmail.com',

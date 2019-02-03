@@ -7,7 +7,7 @@ slug: "/posts/futility-of-present/"
 category: "General"
 tags:
   - "General"
-description: "Random rants"
+description: "Random rants."
 ---
 
 Not with the slightest intention to mar the happiness of the new year, but this post isn't going meet the upbeat tempo that most people are in with the advent of the new year. To most, a new year is a new beginning. New beginnings are good, in fact, they're great. They bring with themselves, new hopes, new aspirations, new goals and new determination. New year instills in people the feeling that the world has reset. That's why, probably, for the first month (or only first week perhaps?) everyone dashes to the gym, determined to shed the extra kgs that have piled up, over the last year (and also the backlog before that).
