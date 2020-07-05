@@ -173,6 +173,15 @@ module.exports = {
           camelCase: false,
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `source sans pro\:400,400i,600,700`
+        ],
+        display: 'swap'
+      }
     }
   ]
 };
