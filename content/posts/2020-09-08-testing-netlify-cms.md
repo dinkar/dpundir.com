@@ -9,8 +9,10 @@ category: netlify-cms
 tags:
   - netlify-cms
 ---
-> 1. Hi this is a draft message that I'm writing
-> 2. It uses Netlify CMS
+> 1. ![This is me](/media/profile.jpg "This is me")
+>
+> 2. Hi this is a draft message that I'm writing
+> 3. It uses Netlify CMS
 
 Which is awesome
 
