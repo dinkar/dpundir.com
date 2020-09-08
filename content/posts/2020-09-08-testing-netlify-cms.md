@@ -2,7 +2,7 @@
 template: post
 title: Testing Netlify CMS
 slug: testing-netlify-cms
-draft: true
+draft: false
 date: 2020-09-08T11:57:56.768Z
 description: This is a draft post
 category: netlify-cms
