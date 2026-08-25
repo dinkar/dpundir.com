@@ -6,11 +6,13 @@ import styles from './Contacts.module.scss';
 const Contacts = ({ contacts }) => (
   <div className={styles['contacts']}>
     <ul className={styles['contacts__list']}>
-      {Object.keys(contacts).map((name) => (
+      {Object.entries(contacts)
+        .filter(([, contact]) => Boolean(contact) && contact !== '#')
+        .map(([name, contact]) => (
         <li className={styles['contacts__list-item']} key={name}>
           <a
             className={styles['contacts__list-item-link']}
-            href={getContactHref(name, contacts[name])}
+            href={getContactHref(name, contact)}
             rel="noopener noreferrer"
             target="_blank"
           >

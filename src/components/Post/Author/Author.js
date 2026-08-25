@@ -1,6 +1,6 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import { getContactHref } from '../../../utils';
+import siteConfig from '../../../lib/site';
 import styles from './Author.module.scss';
 
 export const PureAuthor = ({ data }) => {
@@ -23,25 +23,6 @@ export const PureAuthor = ({ data }) => {
   );
 };
 
-export const Author = (props) => (
-  <StaticQuery
-    query={graphql`
-      query AuthorQuery {
-        site {
-          siteMetadata {
-            author {
-              name
-              bio
-              contacts {       
-                twitter
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => <PureAuthor {...props} data={data} />}
-  />
-);
+export const Author = (props) => <PureAuthor {...props} data={{ site: { siteMetadata: siteConfig } }} />;
 
 export default Author;

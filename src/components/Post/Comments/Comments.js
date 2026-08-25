@@ -1,6 +1,6 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import ReactDisqusComments from 'react-disqus-comments';
+import Script from 'next/script';
+import siteConfig from '../../../lib/site';
 
 export const PureComments = ({ data, postTitle, postSlug }) => {
   const {
@@ -13,29 +13,16 @@ export const PureComments = ({ data, postTitle, postSlug }) => {
   }
 
   return (
-    <ReactDisqusComments
-      shortname={disqusShortname}
-      identifier={postTitle}
-      title={postTitle}
-      url={url + postSlug}
-    />
+    <>
+      <div id="disqus_thread" />
+      <Script id="disqus-config" strategy="afterInteractive">
+        {`var disqus_config = function () { this.page.url = '${url + postSlug}'; this.page.identifier = '${postTitle}'; };`}
+      </Script>
+      <Script src={`https://${disqusShortname}.disqus.com/embed.js`} strategy="afterInteractive" />
+    </>
   );
 };
 
-export const Comments = (props) => (
-  <StaticQuery
-    query={graphql`
-      query CommentsQuery {
-        site {
-          siteMetadata {
-            disqusShortname
-            url
-          }
-        }
-      }
-    `}
-    render={(data) => <PureComments {...props} data={data}/>}
-  />
-);
+export const Comments = (props) => <PureComments {...props} data={{ site: { siteMetadata: siteConfig } }} />;
 
 export default Comments;
