@@ -1,6 +1,10 @@
 node_modules/
 .cache/
-public/
+.next/
+public/*
+!public/photo.png
+!public/media/
+!public/media/profile.jpg
 npm-debug.log
 .eslintcache
 .gatsby-context.js

@@ -1,10 +1,10 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import Author from './Author';
 import Contacts from './Contacts';
 import Copyright from './Copyright';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
+import siteConfig from '../../lib/site';
 
 export const PureSidebar = ({ data, isIndex }) => {
   const {
@@ -14,7 +14,7 @@ export const PureSidebar = ({ data, isIndex }) => {
   } = data.site.siteMetadata;
 
   return (
-    <div className={styles['sidebar']}>
+    <div className={`${styles['sidebar']} sidebar`}>
       <div className={styles['sidebar__inner']}>
         <Author author={author} isIndex={isIndex} />
         <Menu menu={menu} />
@@ -25,37 +25,6 @@ export const PureSidebar = ({ data, isIndex }) => {
   );
 };
 
-export const Sidebar = (props) => (
-  <StaticQuery
-    query={graphql`
-      query SidebarQuery {
-        site {
-          siteMetadata {
-            title
-            subtitle
-            copyright
-            menu {
-              label
-              path
-            }
-            author {
-              name
-              photo
-              bio
-              contacts {
-                twitter
-                github
-                email
-                rss
-                facebook
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => <PureSidebar {...props} data={data}/>}
-  />
-);
+export const Sidebar = (props) => <PureSidebar {...props} data={{ site: { siteMetadata: siteConfig } }} />;
 
 export default Sidebar;

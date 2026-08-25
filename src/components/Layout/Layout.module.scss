@@ -2,5 +2,31 @@
 @import '../../assets/scss/mixins';
 
 .layout {
-    lost-center: $layout-width;
+    max-width: $layout-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+// Individual posts intentionally use a distraction-free layout. The post
+// marker is added by Post.js and lets the shared root layout hide the sidebar
+// without making the entire app client-rendered just to inspect the pathname.
+.layout:has(:global(.post-page)) {
+    display: block;
+
+    :global(.sidebar) {
+        display: none;
+    }
+}
+
+@include breakpoint-sm {
+    .layout {
+        grid-template-columns: 5fr 7fr;
+    }
+}
+
+@include breakpoint-lg {
+    .layout {
+        grid-template-columns: 1fr 2fr;
+    }
 }

@@ -2,6 +2,7 @@
 @import '../../assets/scss/mixins';
 
 .post {
+  grid-column: 1;
   &__footer {
     max-width: $layout-post-width;
     margin: 0 auto;
@@ -39,8 +40,15 @@
 
 }
 
+@include breakpoint-sm {
+  .post {
+    grid-column: 2;
+  }
+}
+
 @include breakpoint-lg {
   .post {
+    grid-column: 2;
     &__footer {
       padding: 0;
     }

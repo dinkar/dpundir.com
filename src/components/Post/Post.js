@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import Author from './Author';
 import Comments from './Comments';
 import Content from './Content';
@@ -12,14 +12,14 @@ const Post = ({ post }) => {
     tags,
     title,
     date
-  } = post.frontmatter;
+  } = post;
 
-  const { html } = post;
-  const { tagSlugs } = post.fields;
+  const { html, slug } = post;
+  const tagSlugs = (tags || []).map((tag) => `/tag/${tag.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/`);
 
   return (
-    <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">All Articles</Link>
+    <div className={`${styles['post']} post-page`}>
+      <Link className={styles['post__home-button']} href="/">All Articles</Link>
 
       <div className={styles['post__content']}>
         <Content body={html} title={title} />
@@ -32,7 +32,7 @@ const Post = ({ post }) => {
       </div>
 
       <div className={styles['post__comments']}>
-        <Comments postSlug={post.fields.slug} postTitle={post.frontmatter.title} />
+        <Comments postSlug={slug} postTitle={title} />
       </div>
     </div>
   );

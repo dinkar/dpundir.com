@@ -1,55 +1,29 @@
-<h4 align="center">
-  My personal blog based on <a href="https://github.com/alxshelepenok/gatsby-starter-lumen" target="_blank">Lumen</a> - a minimal, lightweight and mobile-first starter for creating blogs that uses <a href="https://github.com/gatsbyjs/gatsby" target="_blank">Gatsby</a>.
-</h4>
+# dpundir.com
 
-## Access Locally
-```
-$ git clone https://github.com/dinkar/dpundir.com.git
-$ cd dpundir.com
-$ yarn
-$ yarn develop
-```
-To test the CMS locally, you'll need run a production build of the site:
-```
-$ yarn build
-$ yarn serve
+Personal blog of Dinkar Pundir, migrated from Gatsby to Next.js.
+
+## Local development
+
+Requires Node.js 22 or newer.
+
+```sh
+npm ci
+npm run dev
 ```
 
-## Folder Structure
+For a production build:
 
+```sh
+npm run build
+npm run start
 ```
-└── content
-    ├── pages
-    └── posts
-└── static
-    ├── admin
-    └── media
-└── src
-    ├── assets
-    │   └── scss
-    │       ├── base
-    │       └── mixins
-    ├── cms
-    │   └── preview-templates
-    ├── components
-    │   ├── Feed
-    │   ├── Icon
-    │   ├── Layout
-    │   ├── Page
-    │   ├── Pagination
-    │   ├── Post
-    │   │   ├── Author
-    │   │   ├── Comments
-    │   │   ├── Content
-    │   │   ├── Meta
-    │   │   └── Tags
-    │   └── Sidebar
-    │       ├── Author
-    │       ├── Contacts
-    │       ├── Copyright
-    │       └── Menu
-    ├── constants
-    ├── templates
-    └── utils
 
-```
+## Structure
+
+- `content/posts` and `content/pages` contain Markdown content.
+- `src/lib/content.js` reads frontmatter and converts Markdown to HTML.
+- `app` contains Next.js App Router routes for posts, pages, tags, categories, and pagination.
+- `src/components` contains the blog presentation components and SCSS modules.
+- `static/admin/config.yml` remains the Netlify CMS content configuration.
+
+Deployment is configured for Netlify in `netlify.toml` and uses Node 22.
