@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 .next/
+out/
 public/*
 !public/photo.png
 !public/media/
