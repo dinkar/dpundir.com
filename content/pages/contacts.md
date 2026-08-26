@@ -3,8 +3,6 @@ title: "Contact me"
 template: "page"
 ---
 
-Hey there, glad to see your here.
+If you'd like to get in touch, please drop me an e-mail at [dinkarpundir@gmail.com](mailto:dinkarpundir@gmail.com) or at my X handle [@dinkarpundir](https://www.x.com/dinkarpundir).
 
-My resume can be found at [LinkedIn](https://linkedin.com/in/dinkar-pundir). I'm not a big open source contributor but you can still check out my [Github profile](https://github.com/dinkar)
-
-If you'd like to get in touch, please shoot me a mail at [dinkarpundir@gmail.com](mailto:dinkarpundir@gmail.com) or at my Twitter handle [@dinkarpundir](https://twitter.com/dinkarpundir).
+My work experience can be found at [LinkedIn](https://linkedin.com/in/dinkar-pundir). My [Github profile](https://github.com/dinkar). 
